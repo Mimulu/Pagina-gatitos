@@ -1,0 +1,71 @@
+
+.barraSuperior{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fd5151;
+    margin-bottom: 10px;
+    height: 200px;
+}
+
+body{
+    background-color: #fcd2d2;
+}
+
+.texto{
+    font-size: 2.5em;
+    font-family: 'Pacifico', cursive;
+    word-spacing: 5px;
+    color: rgb(255, 255, 255);
+}
+
+.contenedorGatitos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.imagenGatito, .imagenGatitoGris, .imagenGatoGordo, .imagenGatitoAng, .imagenGatito6{
+    width: 30%;
+    height: 30%;
+    margin: 10px;
+    border-radius: 20%;
+    border: 3px solid #fd5151;
+    transition: all 0.5s;
+}
+
+
+.imagenGatito:hover, .imagenGatitoGris:hover, .imagenGatoGordo:hover{
+    transform: scale(1.1);
+}
+
+.barraInferior{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fd5151;
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 768px){
+    .contenedorGatitos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .barraSuperior .texto{
+        display: flex;
+        flex-direction: column;
+        font-size: 10px;
+        width: 100%;
+    }
+}   
