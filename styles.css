@@ -6,13 +6,18 @@
     background-color: #fd5151;
     margin-bottom: 10px;
     height: 200px;
+    border-radius: 0 0 50px 50px;
 }
+
 
 body{
-    background-color: #fcd2d2;
+    background-image: url("gatitusfondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.texto{
+.texto, .corazon{
     font-size: 2.5em;
     font-family: 'Pacifico', cursive;
     word-spacing: 5px;
@@ -27,19 +32,27 @@ body{
     width: 100%;
 }
 
-.imagenGatito, .imagenGatitoGris, .imagenGatoGordo, .imagenGatitoAng, .imagenGatito6{
+
+.imagenGatito, .imagenGatitoGris, .imagenGatoGordo, .imagenGatitoAng, .imagenGatito6, .imagenGatitoFinal{
     width: 30%;
     height: 30%;
-    margin: 10px;
+    margin: 15px;
     border-radius: 20%;
-    border: 3px solid #fd5151;
+    border: 3px dashed #fd5151;
     transition: all 0.5s;
 }
 
 
-.imagenGatito:hover, .imagenGatitoGris:hover, .imagenGatoGordo:hover{
+.imagenGatito:hover, .imagenGatitoGris:hover, .imagenGatoGordo:hover, .imagenGatitoAng:hover, .imagenGatito6:hover, .imagenGatitoFinal:hover{
     transform: scale(1.1);
 }
+
+.corazon:hover{
+    transform: scale(2.0);
+    color: #fd5151;
+    transition: all 0.5s;
+}
+
 
 .barraInferior{
     display: flex;
@@ -49,8 +62,10 @@ body{
     height: 100%;
     width: 100%;
     margin-top: 50px;
+    border-radius: 50px 50px 0 0;
 }
 
+/*768px defecto*/
 @media screen and (max-width: 768px){
     .contenedorGatitos{
         display: flex;
@@ -61,11 +76,15 @@ body{
     }
 }
 
-@media screen and (max-width: 480px){
-    .barraSuperior .texto{
+@media screen and (max-width: 768px){
+    .texto{
+        font-size: 2em;
         display: flex;
-        flex-direction: column;
-        font-size: 10px;
+        justify-content: center;
+        align-items: center;
         width: 100%;
+        height: 100%;
     }
-}   
+}
+
+
